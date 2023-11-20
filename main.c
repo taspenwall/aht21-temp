@@ -15,21 +15,15 @@ void printBinary(uint8_t value) {
 }
 
 void aht21_read_data (){
-/*  I added an extra status check to see if that was if that I was missing, It did not correct the problem.
-    uint8_t t = 0x71;  
-    i2c_write_blocking(i2c_default, addr, &t, 1, false);
-    uint8_t status_block;
-    uint8_t read_status_block = i2c_read_blocking(i2c_default, addr, &status_block,1,false);
-    printf("the extra status block is : ");
-    printBinary(status_block); 
-    printf("\n");
-*/
+
     uint8_t r_buffer[6];
     uint8_t frames_read = i2c_read_blocking(i2c_default, addr, r_buffer,6,false);
     for (uint8_t i = 0; i<6; i++){
         printf("byte returned number %u : ", i);
         printBinary(r_buffer[i]);
         printf("\n");
+        // print binary of each byte
+        
     }
 }
 
