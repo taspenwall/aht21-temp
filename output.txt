@@ -1,0 +1,18 @@
+#this is the output when I can talk to the sensor
+
+init of aht21 is successful
+successfully read the status bit.  The number of bytes read is 1 . Binary of the status block 10011000 
+sensor is ready to read
+byte returned number 0 : 10011000
+byte returned number 1 : 00000000
+byte returned number 2 : 00000000
+byte returned number 3 : 00000000
+byte returned number 4 : 00000000
+byte returned number 5 : 00000000
+End of program 
+
+#this is if I try to run the program again 
+
+Status byte returned is not 0x18,  the status byte is : 00000000
+status byte hex : 0
+End of program
